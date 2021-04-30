@@ -12,6 +12,7 @@ gem "validate_url"
 gem 'devise'
 gem 'faker'
 gem 'pundit'
+gem 'rack-canonical-host'
 
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 # Use postgresql as the database for Active Record
