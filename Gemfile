@@ -74,7 +74,6 @@ group :development do
   gem 'bullet'
   gem 'draft_generators', github: 'firstdraft/draft_generators', branch: 'winter-2020'
   gem 'pry-rails'
-  gem 'rack-canonical-host'
   gem 'rails_db'
   gem 'rails-erd'
   gem 'rollbar'
