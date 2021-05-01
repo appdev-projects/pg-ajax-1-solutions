@@ -1,7 +1,7 @@
 class PhotoPolicy < ApplicationPolicy
   attr_reader :user, :photo
 
-  def initialize(user, record)
+  def initialize(user, photo)
     @user = user
     @photo = photo
   end
