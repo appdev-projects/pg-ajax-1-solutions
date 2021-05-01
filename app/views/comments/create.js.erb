@@ -1,11 +1,9 @@
-comment = $("<%= j(render @comment) %>");
+var comment = $("<%= j(render @comment) %>");
 
 comment.hide();
 
-$("#<%= dom_id(@comment.photo) %>_comments").append(comment);
+$("#<%= dom_id(@comment.photo) %> #new_comment_form").before(comment);
 
 comment.slideDown();
 
-$("#<%= dom_id(@comment.photo) %> #comment_body").val("");
-
-$("#<%= dom_id(@comment.photo) %> #comment_body").focus();
+$("#<%= dom_id(@comment.photo) %> #new_comment_form #comment_body").val("");
