@@ -144,10 +144,12 @@
     target: "#{dom_id(user)}_following"
 %>
 
-<%=
-  render "users/connected_users_modal.html.erb",
-    user: user,
-    connected_users: user.pending,
-    description: "pending",
-    target: "#{dom_id(user)}_pending"
-%>
+<% if policy(@user).update? %>
+  <%=
+    render "users/connected_users_modal.html.erb",
+      user: user,
+      connected_users: user.pending,
+      description: "pending",
+      target: "#{dom_id(user)}_pending"
+  %>
+<% end %>
