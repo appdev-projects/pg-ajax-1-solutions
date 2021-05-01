@@ -1,4 +1,4 @@
-<div class="card">
+<div id="<%= dom_id(photo) %>" class="card">
   <div class="card-body py-3 d-flex align-items-center justify-content-between">
     <h2 class="h5 m-0 p-0 d-flex align-items-center">
       <%= image_tag photo.owner.avatar_image, class: "rounded-circle mr-2", width: 36 %>
@@ -27,8 +27,8 @@
     <p class="card-text"><%= photo.caption %></p>
   </div>
 
-  <ul class="list-group list-group-flush">
-    <% photo.comments.each do |comment| %>
+  <ul id="<%= dom_id(photo) %>_comments" class="list-group list-group-flush">
+    <% photo.comments.default_order.each do |comment| %>
       <%= render "comments/comment", comment: comment %>
     <% end %>
   </ul>
