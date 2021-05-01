@@ -5,7 +5,6 @@ ruby '2.7.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 
-gem 'draft_generators', github: 'firstdraft/draft_generators', branch: 'winter-2020'
 gem 'active_link_to'
 gem "strip_attributes"
 gem "validate_url"
@@ -73,6 +72,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'
+  gem 'draft_generators', github: 'firstdraft/draft_generators', branch: 'winter-2020'
   gem 'pry-rails'
   gem 'rack-canonical-host'
   gem 'rails_db'
